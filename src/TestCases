@@ -1,0 +1,81 @@
+TC #1.
+Summary: Registration.
+Preconditions:
+1.The main page of http://prestashop.qatestlab.com.ua/en/.
+ 	
+STR:
+1.Click "Sing in" button.
+2.In the field Create an account "Email" input "omchz@gmail.com".
+3.Click "Creat an account" button.
+4.In the field "First name" input "Patric".
+5.In the field "Last name" input "Otozh".
+6.In the field "Password" input "vanzer11".
+7.Click the "Register" button.
+
+ER:
+Opens the page "My account".
+
+TC #2.
+Summary: Authenticayion on the website.
+Preconditions:
+1.The main page of http://prestashop.qatestlab.com.ua/en/.
+2. The user is registered on this website. 	
+STR:
+1.Click "Sing in" button.
+2.In the field Already registered? "Email" input "omchz@gmail.com".
+3.In the field Already registered? "Password" input "vanzer11".
+4.Click the "Sign in" button.
+
+ER:
+Opens the page "My account".
+
+
+TC #3.
+Summary: Search of Product.
+Preconditions:
+1.The main page of http://prestashop.qatestlab.com.ua/en/.
+2.The user is registered on this website.
+	
+STR:
+1.Click "Sing in" button.
+2.In the field "Email" input "omchz@gmail.com".
+3.In the field "Password" input "vanzer11".
+4.Click the "Sign in" button.
+5.In the field "Search" input "Printed Summer Dress".
+6.Click "Search" button.
+
+ER:
+Opens the page with "Printed Summer Dress".
+
+TC #4.
+Summary: Add products to cart.
+Preconditions:
+1.The main page of http://prestashop.qatestlab.com.ua/en/.
+2. The user is registered on this website.  	
+STR:
+1.Click "Sing in" button.
+2.In the field Already registered? "Email" input "omchz@gmail.com".
+3.In the field Already registered? "Password" input "vanzer11".
+4.In the drop-down List "Woman" select "Blouses".
+5.In the field "Blouses" click "Add to cart".
+6. Click  "Cart" button.
+
+ER:
+Opens the page "SHOPPING-CART SUMMARY".
+
+TC #5.
+Summary: Change in quantity of product.
+Preconditions:
+1.The main page of http://prestashop.qatestlab.com.ua/en/.
+2.The user is registered on this website.
+STR:
+1.Click "Sing in" button.
+2.In the field "Email" input "omchz@gmail.com".
+3.In the field "Password" input "vanzer11".
+4.In the drop-down List "Woman" select "Blouses".
+5.In the field "Blouses" click "Add to cart".
+6.Click  "Cart" button.
+7.Click  "+" button.
+
+ER:
+Change in fields "Qty" and "Total".
