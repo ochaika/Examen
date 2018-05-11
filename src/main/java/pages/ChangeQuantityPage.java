@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+
+//Изменение количества товара в корзине
 public class ChangeQuantityPage extends ParentPage {
     @FindBy(xpath = ".//*[@class = 'shopping_cart']")
     private WebElement clickCart;

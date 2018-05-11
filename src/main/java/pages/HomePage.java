@@ -24,6 +24,10 @@ public class HomePage extends ParentPage{
     @FindBy(id = "submitAccount")
     private WebElement clickRegistr;
 
+
+
+    //Процесс регистрации на сайте
+
     public HomePage(WebDriver webDriver) {
         super(webDriver);
     }

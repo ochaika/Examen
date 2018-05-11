@@ -3,6 +3,8 @@ package authenticationTest;
 import org.junit.Test;
 import parentTest.ParentTest;
 
+
+//Авторизация на сайте
 public class AuthenticationTest extends ParentTest {
 
     @Test
