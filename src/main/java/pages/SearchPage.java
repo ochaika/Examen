@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+
+//Поиск товара за названием
 public class SearchPage extends ParentPage {
     @FindBy(id = "search_query_top")
     private WebElement inputtext;

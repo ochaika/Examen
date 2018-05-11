@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+
+//Авторизация на сайте
 public class AuthenticationPage extends ParentPage {
     @FindBy(id = "email")
     private WebElement inputEmailAuth;

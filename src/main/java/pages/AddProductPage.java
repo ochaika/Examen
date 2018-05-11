@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+
+//Добавить изделие в корзину
 public class AddProductPage extends ParentPage {
     @FindBy(xpath = ".//*[@class='logo img-responsive']")
     private WebElement clickLogo;
