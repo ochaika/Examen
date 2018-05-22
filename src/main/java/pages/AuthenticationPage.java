@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 
-//Авторизация на сайте
+//Autorisation on the site
 public class AuthenticationPage extends ParentPage {
     @FindBy(id = "email")
     private WebElement inputEmailAuth;
@@ -15,18 +15,19 @@ public class AuthenticationPage extends ParentPage {
     @FindBy(id = "SubmitLogin")
     private WebElement buttonAuth;
 
-    public AuthenticationPage(WebDriver webDriver)
-    {
+    public AuthenticationPage(WebDriver webDriver) {
         super(webDriver);
     }
 
-    public void enterEmailAu(String emailAuth){
+    public void enterEmailAu(String emailAuth) {
         actionWithOurElements.enterTextInToElement(inputEmailAuth, emailAuth);
     }
-    public void enterPassAu(String passAuth){
+
+    public void enterPassAu(String passAuth) {
         actionWithOurElements.enterTextInToElement(inputPassAuth, passAuth);
     }
-    public void clickAu(){
+
+    public void clickAu() {
         actionWithOurElements.clickOnElement(buttonAuth);
     }
 }

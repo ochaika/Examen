@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 
-//Поиск товара за названием
+//Search product by name
 public class SearchPage extends ParentPage {
     @FindBy(id = "search_query_top")
     private WebElement inputtext;
@@ -17,10 +17,11 @@ public class SearchPage extends ParentPage {
         super(webDriver);
     }
 
-    public void enterSearch(String text){
+    public void enterSearch(String text) {
         actionWithOurElements.enterTextInToElement(inputtext, text);
     }
-    public void clickSearch(){
+
+    public void clickSearch() {
         actionWithOurElements.clickOnElement(clickSe);
     }
 }

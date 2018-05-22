@@ -6,11 +6,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
 import static org.openqa.selenium.By.*;
 
-public class HomePage extends ParentPage{
-   @FindBy(xpath = ".//*[@class='login']")
-  private WebElement buttonSignIn;
+public class HomePage extends ParentPage {
+//    @FindBy(xpath = "//h1[@class='page-heading']")
+//    private WebElement myprofil;
+    @FindBy(xpath = ".//*[@class='login']")
+    private WebElement buttonSignIn;
     @FindBy(id = "email_create")
     private WebElement inputElement;
     @FindBy(id = "SubmitCreate")
@@ -23,10 +26,11 @@ public class HomePage extends ParentPage{
     private WebElement inputPassword;
     @FindBy(id = "submitAccount")
     private WebElement clickRegistr;
+    @FindBy(id = "//h1[@class='page-heading']")
+    private WebElement myprofil;
 
 
-
-    //Процесс регистрации на сайте
+    //Registration on the site
 
     public HomePage(WebDriver webDriver) {
         super(webDriver);
@@ -41,25 +45,37 @@ public class HomePage extends ParentPage{
             Assert.fail("Can not open HomePage");
         }
     }
-    public void clickSignIn(){
+
+
+    public void clickSignIn() {
         actionWithOurElements.clickOnElement(buttonSignIn);
     }
-    public void enterEmail(String email){
+
+    public void enterEmail(String email) {
         actionWithOurElements.enterTextInToElement(inputElement, email);
     }
-    public void clickCreateAccount(){
+
+    public void clickCreateAccount() {
         actionWithOurElements.clickOnElement(buttonCreat);
     }
-    public void enterFirestName(String firstName){
+
+    public void enterFirestName(String firstName) {
         actionWithOurElements.enterTextInToElement(inputFirstName, firstName);
     }
-    public void enterLastNAme(String lastName){
+
+    public void enterLastNAme(String lastName) {
         actionWithOurElements.enterTextInToElement(inputLastName, lastName);
     }
-    public void enterPassword(String pasword){
+
+    public void enterPassword(String pasword) {
         actionWithOurElements.enterTextInToElement(inputPassword, pasword);
     }
-    public void clickRegistration(){
+
+    public void clickRegistration() {
         actionWithOurElements.clickOnElement(clickRegistr);
+    }
+
+    public boolean isMyProfilPresent() {
+        return actionWithOurElements.isElementPresent(myprofil);
     }
 }

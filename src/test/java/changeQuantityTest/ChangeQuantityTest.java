@@ -4,7 +4,7 @@ import org.junit.Test;
 import parentTest.ParentTest;
 
 
-//Изменение количества товара в корзине
+//Change quantity product in the cart
 public class ChangeQuantityTest extends ParentTest {
     @Test
     public void changeQuant() {
@@ -13,10 +13,10 @@ public class ChangeQuantityTest extends ParentTest {
         authenticationPage.enterEmailAu("omchz@gmail.com");
         authenticationPage.enterPassAu("vanzer11");
         authenticationPage.clickAu();
-        addProductPage.clickLogotype();   //Выбор товара
+        addProductPage.clickLogotype();   //Select product
         addProductPage.addProduct();
         addProductPage.addToCart();
-        changeQuantityPage.clickCart();    //Зайти в корзину
-        changeQuantityPage.clickPlus();    //Добавить одну штуку товара
+        changeQuantityPage.clickCart();    //Open the cartу
+        changeQuantityPage.clickPlus();    //Add one more the product
     }
 }

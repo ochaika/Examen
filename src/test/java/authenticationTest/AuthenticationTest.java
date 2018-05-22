@@ -4,11 +4,11 @@ import org.junit.Test;
 import parentTest.ParentTest;
 
 
-//Авторизация на сайте
+//Autorisation on the site
 public class AuthenticationTest extends ParentTest {
 
     @Test
-    public void validAuthentication (){
+    public void validAuthentication() {
         homePage.openPage();
         homePage.clickSignIn();
         authenticationPage.enterEmailAu("omchz@gmail.com");

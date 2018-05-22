@@ -4,18 +4,21 @@ import org.junit.Test;
 import parentTest.ParentTest;
 
 
-//Процесс регистрации на сайте
-public class RegistrationTestPageObject extends ParentTest{
+//Registration on the site
+public class RegistrationTestPageObject extends ParentTest {
 
     @Test
-    public void validRegistration (){
-        homePage.openPage();      //Открытие страницы
-        homePage.clickSignIn();   //нажатие кнопки SignIn
-        homePage.enterEmail("qwerty41@gmail.com");   //Регистрация
+    public void validRegistration() {
+        homePage.openPage();      //Open page
+        homePage.clickSignIn();   //Click button "Sing in"
+        homePage.enterEmail("qwerty43@gmail.com");   //Registration
         homePage.clickCreateAccount();
         homePage.enterFirestName("Patric");
         homePage.enterLastNAme("Otozh");
         homePage.enterPassword("vanzer11");
         homePage.clickRegistration();
+
+        checkAC("Avatar is not present", homePage.isMyProfilPresent(), true);
     }
+
 }

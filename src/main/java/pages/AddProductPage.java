@@ -1,32 +1,33 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 
-//Добавить изделие в корзину
+//Add product to cart
 public class AddProductPage extends ParentPage {
     @FindBy(xpath = ".//*[@class='logo img-responsive']")
-    private WebElement clickLogo;
+    private WebElement buttonLogo;
     @FindBy(xpath = ".//*[contains(text(),'Black blouse with flowers')]")
     private WebElement nameProduct;
     @FindBy(name = "Submit")
-    private WebElement cliclAdd;
+    private WebElement AddButton;
 
     public AddProductPage(WebDriver webDriver) {
         super(webDriver);
     }
 
-    public void clickLogotype(){
-        actionWithOurElements.clickOnElement(clickLogo);
+    public void clickLogotype() {
+        actionWithOurElements.clickOnElement(buttonLogo);
     }
-    public void addProduct (){
+
+    public void addProduct() {
         actionWithOurElements.clickOnElement(nameProduct);
     }
-    public void addToCart(){
-        actionWithOurElements.clickOnElement(cliclAdd);
+
+    public void addToCart() {
+        actionWithOurElements.clickOnElement(AddButton);
     }
 
 }
