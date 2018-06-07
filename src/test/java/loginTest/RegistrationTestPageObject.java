@@ -9,16 +9,31 @@ public class RegistrationTestPageObject extends ParentTest {
 
     @Test
     public void validRegistration() {
-        homePage.openPage();      //Open page
-        homePage.clickSignIn();   //Click button "Sing in"
-        homePage.enterEmail("qwerty43@gmail.com");   //Registration
-        homePage.clickCreateAccount();
-        homePage.enterFirestName("Patric");
-        homePage.enterLastNAme("Otozh");
-        homePage.enterPassword("vanzer11");
-        homePage.clickRegistration();
+        homePage.openPage();
+        homePage.clickSignIn();
+        homePage.clickRegistOneMore();
+        homePage.enterEmail("qwerty77@gmail.com");
+        homePage.enterPassword("12345678");
+        homePage.clickBegin();
+        homePage.enterFirstName("Vana");
+        homePage.enterLastNAme("Otoze");
+        homePage.clickOnbord();
+        homePage.enterPhone("675388650");
+        homePage.clickContinue();
+        homePage.clickDebuging();
+        homePage.clickDebugSms();
+        homePage.clickCheckbox();
 
-        checkAC("Avatar is not present", homePage.isMyProfilPresent(), true);
-    }
+
+
+
+      //  homePage.clickCreateAccount();
+//        homePage.enterFirestName("Patric");
+//        homePage.enterLastNAme("Otozh");
+        //homePage.enterPassword("vanzer11");
+       // homePage.clickRegistration();
+
+//        checkAC("Avatar is not present", homePage.isMyProfilPresent(), true);
+   }
 
 }
