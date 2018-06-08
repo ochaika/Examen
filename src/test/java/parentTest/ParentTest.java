@@ -23,11 +23,11 @@ public class ParentTest {
 
     @Before
     public void setUp() {
-        File file = new File("./src/drivers/chromedriver.exe");
+        File file = new File("./src/drivers/chromedriver");
         System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
         webDriver = new ChromeDriver();
-        webDriver.manage().window().maximize();
-        webDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        //webDriver.manage().window().maximize();
+        webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         homePage = new HomePage(webDriver);
         authenticationPage = new AuthenticationPage(webDriver);
@@ -36,10 +36,10 @@ public class ParentTest {
         changeQuantityPage = new ChangeQuantityPage(webDriver);
     }
 
-    @After
-    public void tearDown() {
-        webDriver.quit();
-    }
+//    @After
+//    public void tearDown() {
+//        webDriver.quit();
+//    }
 
     @Step
     protected void checkAC(String message, boolean actual, boolean expected) {

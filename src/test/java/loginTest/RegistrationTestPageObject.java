@@ -8,21 +8,21 @@ import parentTest.ParentTest;
 public class RegistrationTestPageObject extends ParentTest {
 
     @Test
-    public void validRegistration() {
+    public void validRegistratiovalidRegistration() {
         homePage.openPage();
         homePage.clickSignIn();
-        homePage.clickRegistOneMore();
-        homePage.enterEmail("qwerty77@gmail.com");
-        homePage.enterPassword("12345678");
+//        homePage.clickRegistOneMore();
+       // homePage.enterEmail("qwerty77@gmail.com");
+       homePage.enterPassword("12345678");
         homePage.clickBegin();
-        homePage.enterFirstName("Vana");
-        homePage.enterLastNAme("Otoze");
-        homePage.clickOnbord();
-        homePage.enterPhone("675388650");
-        homePage.clickContinue();
-        homePage.clickDebuging();
-        homePage.clickDebugSms();
-        homePage.clickCheckbox();
+//        homePage.enterFirstName("Vana");
+//        homePage.enterLastNAme("Otoze");
+//        homePage.clickOnbord();
+//        homePage.enterPhone("675388650");
+//        homePage.clickContinue();
+//        homePage.clickDebuging();
+//        homePage.clickDebugSms();
+//        homePage.clickCheckbox();
 
 
 

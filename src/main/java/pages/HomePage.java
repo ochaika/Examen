@@ -5,23 +5,30 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+
+import java.util.List;
 
 import static org.openqa.selenium.By.*;
 
 public class HomePage extends ParentPage {
 //    @FindBy(xpath = "//h1[@class='page-heading']")
 //    private WebElement myprofil;
-    @FindBy(xpath = "//*[@id=\"b_tt_holder_1\"]/div/span")
+    @FindBy(xpath = "//*[@id='current_account_create']")
     private WebElement buttonSignIn;
-    @FindBy(xpath = "//*[@id=\"b2indexPage\"]/div[16]/div[1]/div/div[1]/div[2]")
-    private WebElement buttonRegistration;
-    @FindBy(xpath = "//*[@id=\"b2indexPage\"]/div[16]/div[1]/div/div[4]/form[1]/label[1]/input")
+//    @FindBy(xpath = "//*[@id=\"b2indexPage\"]/div[16]/div[1]/div/div[1]/div[2]")
+//    private WebElement buttonRegistration;
+
+    @FindBy(xpath = "//*[@id='password']")
     private WebElement inputElement;
-    @FindBy(xpath = "//*[@id=\"password\"]")
+    @FindBy(xpath = "//*[@id='password']")
     private WebElement inputPassword;
-    @FindBy(xpath = "//*[@id=\"b2indexPage\"]/div[16]/div[1]/div/div[4]/form[1]/input[12]")
+
+   @FindBy(xpath = ".//input[@type='submit']")
     private WebElement buttonBegin;
+
     @FindBy(xpath = "//*[@id=\"wl252-firstname\"]")
     private WebElement inputFirstName;
     @FindBy(id = "//*[@id=\"wl252-lastname\"]")
@@ -75,9 +82,9 @@ public class HomePage extends ParentPage {
         actionWithOurElements.clickOnElement(buttonSignIn);
     }
 
-    public void clickRegistOneMore() {
-        actionWithOurElements.clickOnElement(buttonRegistration);
-    }
+//    public void clickRegistOneMore() {
+//        actionWithOurElements.clickOnElement(buttonRegistration);
+//    }
 
     public void enterEmail(String email) {
         actionWithOurElements.enterTextInToElement(inputElement, email);
