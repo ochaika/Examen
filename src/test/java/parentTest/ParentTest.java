@@ -1,7 +1,8 @@
 package parentTest;
 
 import io.qameta.allure.Step;
-import org.junit.After;
+import libs.ConfigProperties;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.Assert;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
@@ -10,26 +11,28 @@ import pages.*;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Logger;
 
 public class ParentTest {
     WebDriver webDriver;
-    protected HomePage homePage;
+    protected BookingPage bookingPage;
     protected AuthenticationPage authenticationPage;
     protected SearchPage searchPage;
     protected AddProductPage addProductPage;
     protected ChangeQuantityPage changeQuantityPage;
     org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(getClass());
 
+    protected String browser = System.getProperty("browser");
+    protected static ConfigProperties configProperties = ConfigFactory.create(ConfigProperties.class);
+
     @Before
     public void setUp() {
-        File file = new File("./src/drivers/chromedriver");
+        File file = new File("./src/drivers/chromedriver.exe");
         System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
         webDriver = new ChromeDriver();
         //webDriver.manage().window().maximize();
-        webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(55, TimeUnit.SECONDS);
 
-        homePage = new HomePage(webDriver);
+        bookingPage = new BookingPage(webDriver);
         authenticationPage = new AuthenticationPage(webDriver);
         searchPage = new SearchPage(webDriver);
         addProductPage = new AddProductPage(webDriver);

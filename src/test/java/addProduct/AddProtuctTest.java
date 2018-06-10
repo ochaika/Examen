@@ -8,8 +8,8 @@ import parentTest.ParentTest;
 public class AddProtuctTest extends ParentTest {
     @Test
     public void addProd() {
-        homePage.openPage();
-        homePage.clickSignIn();
+        bookingPage.openPage();
+        bookingPage.clickSignIn();
         authenticationPage.enterEmailAu("omchz@gmail.com");
         authenticationPage.enterPassAu("vanzer11");
         authenticationPage.clickAu();

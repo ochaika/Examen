@@ -8,8 +8,8 @@ import parentTest.ParentTest;
 public class ChangeQuantityTest extends ParentTest {
     @Test
     public void changeQuant() {
-        homePage.openPage();
-        homePage.clickSignIn();
+        bookingPage.openPage();
+        bookingPage.clickSignIn();
         authenticationPage.enterEmailAu("omchz@gmail.com");
         authenticationPage.enterPassAu("vanzer11");
         authenticationPage.clickAu();
