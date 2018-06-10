@@ -7,8 +7,8 @@ import parentTest.ParentTest;
 public class SearchTest extends ParentTest {
     @Test
     public void search() {
-        homePage.openPage();
-        homePage.clickSignIn();
+        bookingPage.openPage();
+        bookingPage.clickSignIn();
         authenticationPage.enterEmailAu("omchz@gmail.com");
         authenticationPage.enterPassAu("vanzer11");
         authenticationPage.clickAu();
