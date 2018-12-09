@@ -10,6 +10,7 @@ public class ParentPage {
     ActionWithOurElements actionWithOurElements; //обьект для класса ActionWithOurElements
     WebDriver webDriver;
 
+
     public ParentPage(WebDriver webDriver) {   //конструктор = на имя класса + Alt INS
         this.webDriver = webDriver;
         actionWithOurElements = new ActionWithOurElements(webDriver);
